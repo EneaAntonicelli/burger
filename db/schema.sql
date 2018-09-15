@@ -7,7 +7,10 @@ USE burgersdb;
 CREATE TABLE burgers (
 	id int NOT NULL AUTO_INCREMENT,
 	burgerName varchar(255) NOT NULL,
-	purchased BOOLEAN DEFAULT false,
+    purchased BOOLEAN DEFAULT false,
+	addTomatos BOOLEAN DEFAULT false,
+    addCheese BOOLEAN DEFAULT false,
+    addBacon BOOLEAN DEFAULT false,    
 	PRIMARY KEY (id)
     );
 

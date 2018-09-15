@@ -74,6 +74,11 @@ li {
   margin: 40px;
 }
 
+.burgersPurchased {
+  margin-top: 50px !important;
+  margin-right: 20px !important;
+}
+
 .burgersPurchased, .card {
   margin: 20px;
   display: flex;
@@ -88,8 +93,9 @@ li {
   padding: 10px;
   margin: 5px; */
 }
-#ca {
+#inputField {
   margin: 0 20px;
+  color: black;
 }
 .remove { 
   width: 80%;

@@ -45,18 +45,21 @@ $(function() {
   
 
 
-    $(".createBurger").on("submit", function(event) {
-      console.log('Hi Enea')
+    $("#createBurger").on("click", function(event) {
+      console.log(event.target);
       event.preventDefault();
-  
-      var newBurger = {
-        name: $("#ca").val().trim(),
-        addTomato: $("[name=purchased]:!checked").val().trim(),
-        addCheese: $("[name=purchased]:!checked").val().trim(),
-        addBacon: $("[name=purchased]:!checked").val().trim()
-      };
-  
       
+      var newBurger = {
+        burgerName: $("#inputField").val().trim(),
+        
+        // TO ADD AT A LATER TIME:
+        // addCheese: $("[name=addCheese]").is(':checked'),
+        // addTomatos: $("[name=addTomato]").is(':checked'),
+        // addBacon: $("[name=addBacon]").is(':checked')
+        
+      };
+    
+      console.log('Hi Enea');
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
@@ -87,4 +90,5 @@ $(function() {
       );
     });
   });
+  
   

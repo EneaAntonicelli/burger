@@ -51,18 +51,20 @@
       <form class="create-form">
 
         <div class="form-group">
-          <label for="ca">Burger Name:</label>
-          <input type="text" id="ca" name="name">
+          <label for="inputField">Burger Name:</label>
+          <input type="text" id="inputField" name="inputField">
         {{!-- </div>
 
         <div class="form-group"> --}}
           <label for="purchased">Customize Burger:</label><br>
-          <input type="radio" name="addCheese" value="false"> Add Cheese<br>
-          <input type="radio" name="addTomatos" value="false"> Add Tomatos<br>
-          <input type="radio" name="addBacon" value="false"> Add Bacon<br>
+          {{!-- TO ADD AT A LATER TIME --}}
+          {{!-- <input type="checkbox" name="addCheese" value="1" > Add Cheese<br>
+          <input type="checkbox" name="addTomatos" value="1" > Add Tomatos<br>
+          <input type="checkbox" name="addBacon" value="1"> Add Bacon<br> --}}
+         
         </div>
       </form>
-      <button type="submit" class="btn btn-primary createBurger">Add Burger</button>
+      <button class="btn btn-primary createBurger" id="createBurger">Add Burger</button>
     </div>
   </div>
 </div>
