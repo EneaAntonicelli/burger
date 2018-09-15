@@ -10,7 +10,8 @@ CREATE TABLE burgers (
     purchased BOOLEAN DEFAULT false,
 	addTomatos BOOLEAN DEFAULT false,
     addCheese BOOLEAN DEFAULT false,
-    addBacon BOOLEAN DEFAULT false,    
+    addBacon BOOLEAN DEFAULT false,  
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
     );
 
