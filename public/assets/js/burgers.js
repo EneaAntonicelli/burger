@@ -22,6 +22,27 @@ $(function() {
         }
       );
     });
+
+    $(".remove").on("click", function(event) {
+      console.log("ENEA")
+      var id = $(this).data("id");
+      var remove = $(this).data("remove");
+  
+      var removeState = {
+        purchased: 0
+      };
+  
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: removeState
+      }).then(
+        function() {
+          console.log("changed requisition to", remove);
+          
+          location.reload();
+        }
+      );
+    });
   
 
 

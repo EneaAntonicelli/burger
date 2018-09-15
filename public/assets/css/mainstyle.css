@@ -65,7 +65,7 @@ li {
   background: rgb(19, 19, 19);
 }
 .card-body {
-  margin: 40px 40px 0 40px;
+  margin: 0 0 0 40px;
 }
 .create-form {
   margin: 40px;
@@ -76,4 +76,32 @@ li {
 
 .burgersPurchased {
   margin: 40px;
+  display: flex;
+  flex-direction: column;
+}
+#ca {
+  margin-left: 20px;
+}
+.remove { 
+  width: 80%;
+  margin: 10px !important;
+  padding: 2px !important;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.purchase, .deleteBurger {
+  margin: 10px !important;
+  padding: 2px !important;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.addColumn {
+  display: inline-flex;
+}
+.createBurger {
+  max-height: 50px;
+  margin: 30px;
 }

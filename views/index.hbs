@@ -2,7 +2,7 @@
 <div class="container main-container">
   <div class="row">
 
-    <div class="col-sm-3 col-md-3">
+    <div class="col-sm-12 col-md-3">
       <div class="card">
       <img class="card-img-top" src="/assets/images/menu.png" width="200px" alt="Card image">
       <div class="card-body">
@@ -13,11 +13,7 @@
 
                <h4>{{this.burgerName}}</h4>
                 {{this.value}}
-
-              <form action="/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="purchased" value="true">
-                <button class="btn btn-primary" type="submit">Purchase</button>
-              </form>
+              {{> stateChange}}
             {{/unless}}
           {{/each}}
            
@@ -26,45 +22,46 @@
   </div>
 
       </div>
-    <div class="col-sm-6 col-md-6">
+    <div class="col-sm-12 col-md-6">
       <div class="burgerImport" id="burgerArea">
             {{>burger}}
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-sm-12 col-md-3">
       <div class="burgersPurchased">
-      <h2>Burgers purchased</h2>
+      <h2>Burgers Build</h2>
     
       {{#each burgers}}
         {{#if this.purchased}}
           <li class="li-background">
             {{this.id}}
             {{this.burgerName}}
-
           </li>
+          <button class="btn btn-warning remove" data-id="{{this.id}}">REMOVE</button>
         {{/if}}
       {{/each}}
       </div>
+      
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3 col-md-12">
+    <div class="col-sm-12 col-md-12 addColumn">
       <h3 class="h3Margin">Add a Custom Burger</h3>
       <form class="create-form">
 
         <div class="form-group">
           <label for="ca">Burger Name:</label>
           <input type="text" id="ca" name="name">
-        </div>
+        {{!-- </div>
 
-        <div class="form-group">
-          <label for="purchased">Purchase immediately?</label><br>
-          <input type="radio" name="purchased" value="true" checked> Purchased!<br>
-          <input type="radio" name="purchased" value="false"> Not yet purchased
+        <div class="form-group"> --}}
+          <label for="purchased">Customize Burger:</label><br>
+          <input type="radio" name="addCheese" value="false"> Add Cheese<br>
+          <input type="radio" name="addTomatos" value="false"> Add Tomatos<br>
+          <input type="radio" name="addBacon" value="false"> Add Bacon<br>
         </div>
-
-        <button type="submit" class="createBurger">Add Burger</button>
       </form>
+      <button type="submit" class="btn btn-primary createBurger">Add Burger</button>
     </div>
   </div>
 </div>
