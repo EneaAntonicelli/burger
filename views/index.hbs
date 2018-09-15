@@ -1,0 +1,91 @@
+
+<div class="container main-container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card">
+      <img class="card-img-top" src="/assets/images/menu.png" width="200px" alt="Card image">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          
+          {{#each burgers}}
+            {{#unless purchased}}
+
+               <h4>{{this.burgerName}}</h4>
+                {{this.value}}
+
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="purchased" value="true">
+                <button class="btn btn-primary" type="submit">Purchase</button>
+              </form>
+            {{/unless}}
+          {{/each}}
+           
+        </ul>
+    </div>
+  </div>
+
+      </div>
+    <div class="col-md-6">
+      <div class="burgerImport" id="burgerArea">
+            {{>burger}}
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h2>Burgers purchased</h2>
+    
+      {{#each burgers}}
+        {{#if this.purchased}}
+          <li class="li-background">
+            {{this.id}}
+            {{this.burgerName}}
+
+          </li>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="h3Margin">Add a Custom Burger</h3>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="purchased">Purchase immediately?</label><br>
+          <input type="radio" name="purchased" value="true" checked> Purchased!<br>
+          <input type="radio" name="purchased" value="false"> Not yet purchased
+        </div>
+
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
