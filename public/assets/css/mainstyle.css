@@ -1,5 +1,6 @@
 .main-container {
-background: floralwhite;
+background: rgb(44, 44, 44);
+color: white;
 }
 
 li {
@@ -61,11 +62,18 @@ li {
 }
 
 .li-background {
-  background: rgb(250, 229, 210);
+  background: rgb(19, 19, 19);
+}
+.card-body {
+  margin: 40px 40px 0 40px;
 }
 .create-form {
   margin: 40px;
 }
 .h3Margin {
+  margin: 40px;
+}
+
+.burgersPurchased {
   margin: 40px;
 }
