@@ -1,6 +1,6 @@
 $(function() {
 
-    console.log("TEST BONER");
+    console.log("TEST");
 
     $(".purchase").on("click", function(event) {
       console.log("ENEA")
@@ -23,16 +23,15 @@ $(function() {
       );
     });
 
-    $(".remove").on("click", function(event) {
+    $(".burgersPurchased").on("click", ".remove", function(event) {
       console.log("ENEA")
       var id = $(this).data("id");
       var remove = $(this).data("remove");
-  
+  console.log("THIS IS THE DATA VALUE: ");
       var removeState = {
-        purchased: 0
+        purchased: false
       };
-  
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burgers/remove/" + id, {
         type: "PUT",
         data: removeState
       }).then(
@@ -52,7 +51,9 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        purchased: $("[name=purchased]:checked").val().trim()
+        addTomato: $("[name=purchased]:!checked").val().trim(),
+        addCheese: $("[name=purchased]:!checked").val().trim(),
+        addBacon: $("[name=purchased]:!checked").val().trim()
       };
   
       
