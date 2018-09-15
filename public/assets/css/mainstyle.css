@@ -64,9 +64,9 @@ li {
 .li-background {
   background: rgb(19, 19, 19);
 }
-.card-body {
-  margin: 0 0 0 40px;
-}
+
+
+
 .create-form {
   margin: 40px;
 }
@@ -74,13 +74,22 @@ li {
   margin: 40px;
 }
 
-.burgersPurchased {
-  margin: 40px;
+.burgersPurchased, .card {
+  margin: 20px;
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cartH2 {
+  /* border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px; */
 }
 #ca {
-  margin-left: 20px;
+  margin: 0 20px;
 }
 .remove { 
   width: 80%;
@@ -100,8 +109,13 @@ li {
 }
 .addColumn {
   display: inline-flex;
+  margin-top: 50px;
 }
 .createBurger {
   max-height: 50px;
   margin: 30px;
+}
+
+.leftCard {
+  margin-left: 40px;
 }

@@ -3,8 +3,9 @@
   <div class="row">
 
     <div class="col-sm-12 col-md-3">
-      <div class="card">
       <img class="card-img-top" src="/assets/images/menu.png" width="200px" alt="Card image">
+      <div class="card leftCard">
+      
       <div class="card-body">
         <ul class="list-group list-group-flush">
           
@@ -29,7 +30,7 @@
     </div>
     <div class="col-sm-12 col-md-3">
       <div class="burgersPurchased">
-      <h2>Burgers Build</h2>
+      <h4 class="cartH2">Shopping Cart   <i class="fa fa-shopping-cart" aria-hidden="true"></i></h2>
     
       {{#each burgers}}
         {{#if this.purchased}}
