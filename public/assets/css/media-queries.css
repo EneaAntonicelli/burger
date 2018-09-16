@@ -1,0 +1,88 @@
+@media only screen and (min-width: 320px) and (max-width: 479px){
+.leftCard {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.burgerContainer {
+    margin-bottom: 115px;
+}
+
+.cartH2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.addColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+display: flex;
+align-self: center;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.burgersPurchased {
+    padding: 50px;
+}
+
+} /*END OF 479px QUERY*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px){  
+.leftCard {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.burgerContainer {
+    margin-bottom: 115px;
+}
+
+.cartH2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.addColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    display: flex;
+    align-self: center;
+}
+
+.burgersPurchased {
+    padding: 50px;
+}
+
+}/*END OF 767px QUERY*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ 
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    
+}
+
+
+} /*END OF 991px QUERY*/
+
+@media only screen and (min-width: 992px) and (max-width: 1999px){ 
+
+
+}/*END OF 1999px QUERY*/

@@ -1,36 +1,63 @@
 
 <div class="container main-container">
+  
   <div class="row">
 
-    <div class="col-sm-12 col-md-3">
-      <img class="card-img-top" src="/assets/images/menu.png" width="200px" alt="Card image">
+    <div class="col-sm-12 col-md-3 leftColumn">
+
+      <img  class="card-img-top" 
+            src="/assets/images/menu.png" 
+            width="200px" 
+            alt="Card image">
+
       <div class="card leftCard">
       
-      <div class="card-body">
-        <ul class="list-group list-group-flush">
-          
-          {{#each burgers}}
-            {{#unless purchased}}
+        <div class="card-body">
 
-               <h4>{{this.burgerName}}</h4>
-                {{this.value}}
-              {{> stateChange}}
-            {{/unless}}
-          {{/each}}
-           
-        </ul>
-    </div>
-  </div>
+          <ul class="list-group list-group-flush">
+            {{#each burgers}}
+              {{#unless purchased}}
 
-      </div>
+                <h5>{{this.burgerName}}</h5>
+
+                  {{this.value}}
+                  {{> stateChange}}
+
+              {{/unless}}
+            {{/each}}
+          </ul>
+
+        </div> <!--END OF CARD BODY -->
+
+      </div> <!--END OF LEFT CARD -->
+
+    </div> <!--END OF COLUMN -->
+
+
+
+
+
     <div class="col-sm-12 col-md-6">
-      <div class="burgerImport" id="burgerArea">
+
+      <div  class="burgerImport" 
+            id="burgerArea">
             {{>burger}}
       </div>
-    </div>
+
+    </div> <!--END OF COLUMN -->
+
+
+
+
+
     <div class="col-sm-12 col-md-3">
+
       <div class="burgersPurchased">
-      <h4 class="cartH2">Shopping Cart   <i class="fa fa-shopping-cart" aria-hidden="true"></i></h2>
+
+      <h4 class="cartH2">
+          Shopping Cart
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </h4>
     
       {{#each burgers}}
         {{#if this.purchased}}
@@ -41,33 +68,62 @@
           <button class="btn btn-warning remove" data-id="{{this.id}}">REMOVE</button>
         {{/if}}
       {{/each}}
-      </div>
+
+      </div> <!--END OF BURGERSPURCHASED -->
       
-    </div>
-  </div>
+    </div> <!--END OF COLUMN -->
+    
+  </div> <!--END OF ROW -->
+
+
+
+
   <div class="row">
+
     <div class="col-sm-12 col-md-12 addColumn">
-      <h3 class="h3Margin">Add a Custom Burger</h3>
+
+      <h3 class="h3Margin">Add a Custom Burger!</h3>
+
       <form class="create-form">
 
         <div class="form-group">
-          <label for="inputField">Burger Name:</label>
-          <input type="text" id="inputField" name="inputField">
-        {{!-- </div>
 
-        <div class="form-group"> --}}
-          <label for="purchased">Custom Burger:</label><br>
-          {{!-- TO ADD AT A LATER TIME --}}
-          {{!-- <input type="checkbox" name="addCheese" value="1" > Add Cheese<br>
+          <label  for="inputField">
+                  Burger Name:
+          </label>
+
+          <input  type="text" 
+                  id="inputField" 
+                  name="inputField">
+        
+          <label  for="purchased">
+                  Custom Burger:
+          </label>
+          
+          <br>
+
+          {{!-- 
+          
+          TO ADD AT A LATER TIME 
+          
+          <input type="checkbox" name="addCheese" value="1" > Add Cheese<br>
           <input type="checkbox" name="addTomatos" value="1" > Add Tomatos<br>
           <input type="checkbox" name="addBacon" value="1"> Add Bacon<br> --}}
          
-        </div>
+        </div> <!--END OF END OF FORM-GROUP -->
+
       </form>
-      <button class="btn btn-primary createBurger" id="createBurger">Add Burger</button>
-    </div>
-  </div>
-</div>
+
+      <button class="btn btn-primary createBurger" 
+              id="createBurger">
+              Add Burger
+      </button>
+
+    </div> <!--END OF COLUMN -->
+
+  </div> <!--END OF ROW -->
+
+</div> <!--END OF END OF MAIN CONTAINER -->
 
 
 

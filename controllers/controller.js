@@ -1,37 +1,37 @@
 
 var express = require("express");
-
 var router = express.Router();
-
 var burger = require("../models/burger.js");
 
 
 
 router.get("/", function(req, res) {
+
   burger.all(function(data) {
+
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
+
     res.render("index", hbsObject);
-  });
-});
+
+  }); // END OF ALL FUNCTION
+}); // END OF GET FUNCTION
 
 
 
 
 router.post("/api/burgers", function(req, res) {
-  console.log("IM HERE IN THE CREATE POST");
-  burger.create([
-    "burgerName", "purchased"
-  ], [
-    req.body.burgerName, req.body.purchased
-  ], function(result) {
-console.log("burgerName" + req.body.burgerName)
-console.log("purchased" + req.body.purchased)
-    res.json({ id: result.insertId });
-  });
-});
+  
+    burger.create(
+      ["burgerName", "purchased"], 
+      [req.body.burgerName, req.body.purchased], 
+      function(result) {
+
+      res.json({ id: result.insertId });
+
+    }); // END OF CREATE FUNCTION
+}); // END OF POST FUNCTION
 
 
 
@@ -45,15 +45,18 @@ router.put("/api/burgers/:id", function(req, res) {
     purchased: true
     
   }, condition, function(result) {
-console.log("ITS HAPPENING!!!");
+
     if (result.changedRows == 0) {
       
       return res.status(404).end();
+
     } else {
+
       res.status(200).end();
     }
-  });
-});
+
+  }); // END OF UPDATE FUNCTION
+}); // END OF PUT FUNCTION
 
 
 
@@ -67,15 +70,16 @@ router.put("/api/burgers/remove/:id", function(req, res) {
     purchased: false
     
   }, condition, function(result) {
-console.log("ITS HAPPENING!!!");
+
     if (result.changedRows == 0) {
       
       return res.status(404).end();
     } else {
       res.status(200).end();
     }
-  });
-});
+
+  }); // END OF UPDATE FUNCTION
+}); // END OF PUT FUNCTION
 
 
 
@@ -90,10 +94,12 @@ router.delete("/api/burgers/:id", function(req, res) {
       
       return res.status(404).end();
     } else {
+
       res.status(200).end();
     }
-  });
-});
+
+  }); // END OF BURGER.DELETE FUNCTION
+}); // END OF ROUTER.DELETE FUNCTION
 
 
 module.exports = router;
