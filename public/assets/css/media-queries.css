@@ -71,6 +71,7 @@ align-self: center;
 }/*END OF 767px QUERY*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px){ 
+
 .list-group {
     display: flex;
     flex-wrap: wrap;
@@ -79,10 +80,19 @@ align-self: center;
     
 }
 
+.cartH2 {
+    margin: 20px;
+    text-align: center;
+}
+
 
 } /*END OF 991px QUERY*/
 
 @media only screen and (min-width: 992px) and (max-width: 1999px){ 
 
+.cartH2 {
+    margin: 20px;
+    text-align: center;
+}
 
 }/*END OF 1999px QUERY*/
